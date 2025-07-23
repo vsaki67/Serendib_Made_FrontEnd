@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+@extends('layouts.app')
+
+@section('title', 'SerendibMade - Products')
+
+@section('content')
+<!--<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SerendibMade - Authentic Sri Lankan Crafts & Products</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
     <style>
@@ -56,10 +66,10 @@
         }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50">-->
         
-        <!-- Navigation -->
-        @include('partials.navbar')
+        <!-- Navigation 
+        @include('partials.navbar')-->
 
         <!-- Hero Section -->
         <!--<section class="hero-gradient text-white py-20 md:py-28">
@@ -808,8 +818,10 @@
             </div>
         </section>
 
-        <!-- Footer -->
-        @include('partials.footer')
+        <!-- Footer 
+        @include('partials.footer')-->
 
     </body>
 </html>
+
+@endsection 

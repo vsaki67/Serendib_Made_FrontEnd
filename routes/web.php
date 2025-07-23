@@ -9,7 +9,7 @@ Route::get('/test', function () {
 });
 
 Route::get('/homeindex', function () { return view('homeindex'); });
-Route::get('/product', function () { return view('productpg'); });
+Route::get('/productpg', function () { return view('productpg'); });
 Route::get('/aboutus', function () { return view('aboutus'); });
 Route::get('/artisanpg', function () { return view('artisanpg'); });
 Route::get('/contactus', function () { return view('contactus'); });
