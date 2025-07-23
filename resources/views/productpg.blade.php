@@ -3,91 +3,10 @@
 @section('title', 'SerendibMade - Products')
 
 @section('content')
-<!--<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SerendibMade - Authentic Sri Lankan Crafts & Products</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
-    <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        .product-card {
-            transition: all 0.3s ease;
-        }
-        .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-        }
-        .category-section {
-            scroll-margin-top: 100px;
-        }
-        .section-title {
-            position: relative;
-            display: inline-block;
-            margin-bottom: 2rem;
-        }
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background: #5E3023;
-            bottom: -10px;
-            left: 25%;
-            border-radius: 2px;
-        }
-        
-        /* Testimonial animations */
-        .testimonial-card {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .testimonial-card.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }        
-        /* Staggered delays */
-        .testimonial-card:nth-child(1) { transition-delay: 0.1s; }
-        .testimonial-card:nth-child(2) { transition-delay: 0.3s; }
-        .testimonial-card:nth-child(3) { transition-delay: 0.5s; }        
-        /* Section styling */
-        .testimonials-section {
-            scroll-margin-top: 100px;
-        }
-    </style>
-</head>
-<body class="bg-gray-50">-->
-        
-        <!-- Navigation 
-        @include('partials.navbar')-->
-
-        <!-- Hero Section -->
-        <!--<section class="hero-gradient text-white py-20 md:py-28">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Discover Sri Lankan Heritage</h1>
-                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">Experience the rich craftsmanship of Sri Lanka through our authentic handcrafted products. Each piece tells a story of tradition, culture, and artistry passed down through generations.</p>
-                <div class="flex justify-center gap-4">
-                    <a href="#traditional-art" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">
-                        Explore Collections
-                    </a>
-                    <a href="#" class="border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
-                        Meet Our Artisans
-                    </a>
-                </div>
-            </div>
-        </section>-->
-
-
         <!-- Traditional Art Section -->
         <section id="traditional-art" class="py-16 bg-[#F2E6D8]">
             <div class="container mx-auto px-4">
@@ -100,7 +19,7 @@
                 <div class="mb-16 bg-white rounded-xl shadow-lg overflow-hidden">
                     <div class="md:flex">
                         <div class="md:w-1/2">
-                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&fit=crop" alt="Featured Traditional Art" class="w-full h-full object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/art4.png') }}" alt="Sacred Buddha Painting" class="w-full h-64 object-cover">
                         </div>
                         <div class="md:w-1/2 p-8 flex flex-col justify-center">
                             <div class="flex items-center mb-4">
@@ -135,7 +54,7 @@
                     <!-- Product Card 1 -->
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1576398289164-c48dc021b4e1?w=600&fit=crop" alt="Elephant Wood Carving" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/art1.png') }}" alt="Elephant Wood Carving" class="w-full h-64 object-cover">
                             <div class="absolute top-2 right-2">
                                 <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-[#CC3333]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -168,7 +87,7 @@
                     <!-- Product Card 2 -->
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=600&fit=crop" alt="Traditional Mask" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/art2.png') }}" alt="Traditional Mask" class="w-full h-64 object-cover">
                             <div class="absolute top-2 right-2">
                                 <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -202,7 +121,7 @@
                     <!-- Product Card 3 -->
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
                         <div class="relative">
-                            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600&fit=crop" alt="Temple Scene Canvas" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/art3.png') }}" alt="Temple Scene Canvas" class="w-full h-64 object-cover">
                             <div class="absolute top-2 right-2">
                                 <button class="p-2 bg-white rounded-full shadow-md hover:bg-[#FFCC00] transition-colors">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -359,7 +278,7 @@
                 <!-- Spice Products -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&fit=crop" alt="Ceylon Cinnamon" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/spice1.png') }}" alt="Ceylon Cinnamon" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Ceylon Cinnamon</h4>
                             <p class="text-gray-600 text-sm mb-4">Premium quality true cinnamon (Cinnamomum verum) with delicate flavor and low coumarin content.</p>
@@ -372,7 +291,7 @@
                         </div>
                     </div>
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&fit=crop" alt="Cardamom" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/spice2.png') }}" alt="Ceylon Cardamom" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Ceylon Cardamom</h4>
                             <p class="text-gray-600 text-sm mb-4">Aromatic green cardamom pods with citrusy, floral notes, perfect for both sweet and savory dishes.</p>
@@ -385,7 +304,7 @@
                         </div>
                     </div>
                     <div class="product-card bg-white rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&fit=crop" alt="Spice Mix" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/spice3.png') }}" alt="Curry Spice Mix" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Curry Spice Mix</h4>
                             <p class="text-gray-600 text-sm mb-4">Authentic Sri Lankan curry blend with 12 spices, including coriander, cumin, fennel, and mustard seeds.</p>
@@ -818,10 +737,6 @@
             </div>
         </section>
 
-        <!-- Footer 
-        @include('partials.footer')-->
+@endsection
 
-    </body>
-</html>
-
-@endsection 
+        
