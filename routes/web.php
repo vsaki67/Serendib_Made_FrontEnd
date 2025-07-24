@@ -14,6 +14,8 @@ Route::get('/aboutus', function () { return view('aboutus'); });
 Route::get('/artisanpg', function () { return view('artisanpg'); });
 Route::get('/contactus', function () { return view('contactus'); });
 
+Route::get('/cart', function () { return view('cart'); });
+
 /*Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('home');*/
