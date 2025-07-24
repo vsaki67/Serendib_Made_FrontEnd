@@ -174,7 +174,7 @@
                 <div class="mb-12 bg-gray-50 rounded-xl p-8 md:p-12">
                     <div class="md:flex items-center">
                         <div class="md:w-1/3 mb-6 md:mb-0 md:pr-8">
-                            <img src="https://images.unsplash.com/photo-1594736797933-d0b22cad7de1?w=600&fit=crop" alt="Batik Artisan" class="w-full rounded-lg shadow-md">
+                        <img src="{{ asset('Images_used/ProductPage_images/batik1.png') }}" alt="Batik Artisan" class="w-full h-64 object-cover">
                         </div>
                         <div class="md:w-2/3">
                             <h3 class="text-2xl font-bold text-gray-800 mb-4">The Art of Sri Lankan Batik</h3>
@@ -187,10 +187,10 @@
                 <!-- Batik Products -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1594736797933-d0b22cad7de1?w=600&fit=crop" alt="Batik Dress" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/batik2.png') }}" alt="Traditional Batik Dress" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Traditional Batik Dress</h4>
-                            <p class="text-gray-600 text-sm mb-4">Handcrafted silk batik dress featuring peacock motifs, perfect for special occasions or as a statement piece.</p>
+                            <p class="text-gray-600 text-sm mb-4">Handcrafted luxury silk batik dress featuring peacock motifs, perfect for special occasions or as a statement piece.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-2xl font-bold text-blue-600">$156.99</span>
                                 <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
@@ -200,10 +200,10 @@
                         </div>
                     </div>
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1594736797933-d0b22cad7de1?w=600&fit=crop" alt="Batik Wall Art" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/batik3.png') }}" alt="Batik Mens Shirt" class="w-full h-64 object-cover">
                         <div class="p-6">
-                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Batik Wall Hanging</h4>
-                            <p class="text-gray-600 text-sm mb-4">Large decorative batik art piece depicting elephants in procession, a common Sri Lankan cultural theme.</p>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-2">Batik Mens Shirt</h4>
+                            <p class="text-gray-600 text-sm mb-4">Stylish batik luxury shirt for men, featuring intricate patterns and a comfortable fit, perfect for casual outings.</p>
                             <div class="flex justify-between items-center">
                                 <span class="text-2xl font-bold text-blue-600">$78.99</span>
                                 <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
@@ -213,7 +213,7 @@
                         </div>
                     </div>
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1594736797933-d0b22cad7de1?w=600&fit=crop" alt="Batik Scarf" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/batik4.png') }}" alt="Batik Scarf" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Silk Batik Scarf</h4>
                             <p class="text-gray-600 text-sm mb-4">Luxurious silk scarf with intricate batik print in vibrant colors, lightweight and perfect for any season.</p>
@@ -384,7 +384,7 @@
                 <!-- Featured Tea Products -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&fit=crop" alt="Earl Grey Tea" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/tea1.png') }}" alt="Ceylon Earl Grey" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Ceylon Earl Grey</h4>
                             <p class="text-gray-600 text-sm mb-4">Premium black tea with natural bergamot oil, creating a distinctive citrusy aroma.</p>
@@ -397,7 +397,7 @@
                         </div>
                     </div>
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&fit=crop" alt="Pekoe Tea" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/tea2.png') }}" alt="Orange Pekoe" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Orange Pekoe</h4>
                             <p class="text-gray-600 text-sm mb-4">High-grade Ceylon black tea from Nuwara Eliya with bright flavor and golden liquor.</p>
@@ -410,7 +410,7 @@
                         </div>
                     </div>
                     <div class="product-card bg-gray-50 rounded-xl shadow-lg overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=600&fit=crop" alt="Green Tea" class="w-full h-64 object-cover">
+                        <img src="{{ asset('Images_used/ProductPage_images/tea3.png') }}" alt="Ceylon Green Tea" class="w-full h-64 object-cover">
                         <div class="p-6">
                             <h4 class="text-xl font-semibold text-gray-800 mb-2">Ceylon Green Tea</h4>
                             <p class="text-gray-600 text-sm mb-4">Organic green tea leaves with a light, refreshing taste and high antioxidant content.</p>
