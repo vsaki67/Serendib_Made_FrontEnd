@@ -17,6 +17,11 @@
     <main class="flex-grow">
         @yield('content')
     </main>
+    <div id="cart-notification" class="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-md shadow-lg hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span id="notification-message"></span>
 
     <!-- Footer -->
     @include('partials.footer')

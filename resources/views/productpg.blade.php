@@ -74,7 +74,7 @@
         }
         
         /* Cart notification */
-        .cart-notification {
+        #cart-notification {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -83,23 +83,17 @@
             padding: 12px 24px;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.3s ease;
             z-index: 1000;
-            display: flex;
+            transition: all 0.3s ease;
+            display: none;
             align-items: center;
             gap: 10px;
+            opacity: 0;
         }
         
-        .cart-notification.show {
-            transform: translateY(0);
+        #cart-notification.show {
+            display: flex;
             opacity: 1;
-        }
-        
-        .cart-notification svg {
-            width: 20px;
-            height: 20px;
         }
         
         /* Cart counter */
@@ -113,74 +107,13 @@
         }
     </style>
 
-    
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize cart if empty
-            if (!localStorage.getItem('cart')) {
-                localStorage.setItem('cart', JSON.stringify([]));
-            }
-
-            // Add to Cart Functionality
-            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
-                button.addEventListener('click', () => {
-                    // Get product data
-                    const product = {
-                        id: button.dataset.id,
-                        name: button.dataset.name,
-                        price: parseFloat(button.dataset.price),
-                        image: button.dataset.image,
-                        quantity: 1
-                    };
-
-                    // Get current cart
-                    const cart = JSON.parse(localStorage.getItem('cart'));
-
-                    // Check if item exists
-                    const existingItem = cart.find(item => item.id === product.id);
-                    if (existingItem) {
-                        existingItem.quantity += 1;
-                    } else {
-                        cart.push(product);
-                    }
-
-                    // Save cart
-                    localStorage.setItem('cart', JSON.stringify(cart));
-
-                    // Show custom notification
-                    showCartNotification(product.name);
-                    
-                    // Update cart counter
-                    updateCartCounter();
-                });
-            });
-
-            // Show custom notification
-            function showCartNotification(productName) {
-                const notification = document.getElementById('cart-notification');
-                const message = document.getElementById('notification-message');
-                
-                message.textContent = `${productName} added to your cart`;
-                notification.classList.add('show');
-                
-                // Hide after 3 seconds
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 3000);
-            }
-
-            // Update cart counter
-            function updateCartCounter() {
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-                document.getElementById('cart-counter').textContent = totalItems;
-            }
-
-            // Initialize counter
-            updateCartCounter();
-        });
-    </script>
+    <!-- Cart Notification Element -->
+    <div id="cart-notification" class="hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        <span id="notification-message">Item added to cart</span>
+    </div>
 
     <!-- Traditional Art Section -->
     <section id="traditional-art" class="py-16 bg-[#F9F5F0]">
@@ -805,6 +738,36 @@
             </div>
         </div>
     </section>
-    
-    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize empty cart if none exists
+            if (!localStorage.getItem('cart')) {
+                localStorage.setItem('cart', JSON.stringify([]));
+            }
+
+            // Add to cart button handlers
+            document.querySelectorAll('.add-to-cart-btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const product = {
+                        id: this.dataset.id,
+                        name: this.dataset.name,
+                        price: parseFloat(this.dataset.price),
+                        image: this.dataset.image
+                    };
+
+                    if (!product.id) {
+                        console.error('Product ID is missing');
+                        return;
+                    }
+
+                    addToCart(product);
+                });
+            });
+        });
+    </script>
+
+    @include('partials.footer')
 @endsection
